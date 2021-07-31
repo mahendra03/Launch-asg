@@ -28,8 +28,8 @@ resource "aws_elb" "web_elb" {
     aws_security_group.elb_http.id
   ]
   subnets = [
-    aws_subnet.public_us_east_1a.id,
-    aws_subnet.public_us_east_1b.id
+    aws_subnet.main.id,
+    aws_subnet.main1.id
   ]
 
   cross_zone_load_balancing   = true
